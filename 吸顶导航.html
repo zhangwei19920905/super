@@ -1,0 +1,125 @@
+<!DOCTYPE html >
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>吸顶导航</title>
+<link rel="stylesheet" type="text/css" href="css/reset.css" />
+	<style type="text/css">
+		.content {
+			float: left;
+			height: 500px;
+			overflow: scroll;
+		}
+		.wrap {
+			position: relative;
+			width: 800px;
+			height: 800px;
+		}
+		.wrap h1 {
+			text-align: center;
+			font-size: 2em;
+			border-bottom: 1px solid #000;
+		}
+		.wrap p {
+			width: 100%;
+			text-indent: 2em;
+		}
+		.menu {
+			width: 800px;
+			height: 40px;
+			background: skyblue;
+		}
+		.menu span {
+			display: table-cell;
+			width: 198px;
+			height: 40px;
+			font-size: 1em;
+			line-height: 40px;
+			text-align: center;
+		}
+		.list li {
+			font-size: 2em;
+		}
+		.fix {
+			position: fixed;
+			top: 0;
+			left: 0;
+		}
+		.btn {
+			float: left;
+			position: relative;
+			width: 20px;
+			height: 500px;
+			background: #e6e7e7;
+		}
+		.mous {
+			position: absolute;
+			width: 20px;
+			height: 40px;
+			border-radius: 20px;
+			background: skyblue;
+		}
+	</style>
+</head>
+<body>
+	<div class="content" id="content">
+		<div class="wrap" id="wrap">
+			<h1>HTML学院</h1>
+			<p id="des">【天灏资本调高微博目标股价至25美元】天灏资本认为：1.微博互动度提升，热门微博互动量同比增长34%；2.2015年12月21日至今年4月8日微博下载量新增4.33亿，高于上一季度和去年同期；3.预计微博第一季度营收将达1.137亿美元，高于分析师平均预期，每股摊薄收益也将超出华尔街预。
+			</p>
+			<div class="menu" id="menu">
+				<span>HTML学堂</span>
+				<span>刘锅里</span>
+				<span>张家辉</span>
+				<span>宋祖英</span>
+			</div>
+			<ul class="list">
+				<li>HTML学堂--www.cctv.con.cn</li>
+				<li>HTML学堂--www.cctv.con.cn</li>
+				<li>HTML学堂--www.cctv.con.cn</li>
+				<li>HTML学堂--www.cctv.con.cn</li>
+				<li>HTML学堂--www.cctv.con.cn</li>
+				<li>HTML学堂--www.cctv.con.cn</li>
+				<li>HTML学堂--www.cctv.con.cn</li>
+				<li>HTML学堂--www.cctv.con.cn</li>
+				<li>HTML学堂--www.cctv.con.cn</li>
+				<li>HTML学堂--www.cctv.con.cn</li>
+				<li>HTML学堂--www.cctv.con.cn</li>
+				<li>HTML学堂--www.cctv.con.cn</li>
+				<li>HTML学堂--www.cctv.con.cn</li>
+				<li>HTML学堂--www.cctv.con.cn</li>
+				<li>HTML学堂--www.cctv.con.cn</li>
+				<li>HTML学堂--www.cctv.con.cn</li>
+				<li>HTML学堂--www.cctv.con.cn</li>
+				<li>HTML学堂--www.cctv.con.cn</li>
+				<li>HTML学堂--www.cctv.con.cn</li>
+				<li>HTML学堂--www.cctv.con.cn</li>
+				<li>HTML学堂--www.cctv.con.cn</li>
+				<li>HTML学堂--www.cctv.con.cn</li>
+			</ul>
+		</div>
+	</div>
+	
+	<script>
+		var menus = document.getElementById("menu");
+		var wraps = document.getElementById("wrap");
+		var mous = document.getElementById("mous");
+		var btns = document.getElementById("btn");
+		var cont = document.getElementById("content");
+		var des = document.getElementById("des");
+		var teng = cont.scrollHeight- cont.clientHeight;	
+		var num = 0;
+		// 自定义鼠标绑定
+		cont.onscroll = function() {
+			console.log(cont.scrollHeight - cont.clientHeight)
+			if(menus.offsetTop <= cont.scrollTop) {
+				menus.style.position = "fixed";
+				menus.style.top = 0;
+			} 
+			else {
+				menus.style.position = "absolute";
+			}
+		}
+	</script>
+</body>
+</html>
